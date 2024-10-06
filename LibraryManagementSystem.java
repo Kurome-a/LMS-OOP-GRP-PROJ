@@ -11,7 +11,7 @@ class LibraryManagementSystem {
             scanner.nextLine();
 
             switch (choice) {
-                case 1:
+                case 1: // Adding a book
                     System.out.print("Enter title: ");
                     String title = scanner.nextLine();
                     System.out.print("Enter author: ");
@@ -38,18 +38,30 @@ class LibraryManagementSystem {
                     Display.showSuccessMessage("Book added successfully.");
                     break;
 
-                case 2:
+                case 2: // Removing a book
                     System.out.print("Enter ISBN to remove: ");
                     String isbnToRemove = scanner.nextLine();
                     library.removeBook(isbnToRemove);
                     Display.showSuccessMessage("Book removed successfully.");
                     break;
 
-                case 3:
+                case 3: // Show all
                     Display.showAllBooks(library.getBooks());
                     break;
 
-                case 4:
+                case 4: // Borrow a book
+                    System.out.print("Enter ISBN to borrow: ");
+                    String isbnToBorrow = scanner.nextLine();
+                    Borrow.borrowBook(library, isbnToBorrow);
+                    break;
+
+                case 5: // Returning a book
+                    System.out.print("Enter ISBN to return: ");
+                    String isbnToReturn = scanner.nextLine();
+                    Return.returnBook(library, isbnToReturn);
+                    break;
+
+                case 6: // Exit
                     Display.showSuccessMessage("Exiting the system. Goodbye!");
                     scanner.close();
                     return;
