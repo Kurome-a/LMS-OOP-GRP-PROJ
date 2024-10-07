@@ -6,7 +6,9 @@ public class Display {
         System.out.println("1. Add Book");
         System.out.println("2. Remove Book");
         System.out.println("3. Show All Books");
-        System.out.println("4. Exit");
+        System.out.println("4. Borrow Book");
+        System.out.println("5. Return Book");
+        System.out.println("6. Exit");
         System.out.print("Enter your choice: ");
     }
 
