@@ -8,6 +8,7 @@ class LibraryManagementSystem {
         Library library = new Library();
     
         while (true) {
+            System.out.println("Library Management System");
             System.out.println("Select Role:");
             System.out.println("1. Admin");
             System.out.println("2. User");
