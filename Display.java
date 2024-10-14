@@ -2,6 +2,7 @@ import java.util.ArrayList;
 
 public class Display {
     public static void showAdminMenu() {
+        System.out.println("Welcome to the Library Management System");
         System.out.println("Admin Menu:");
         System.out.println("1. Add Book");
         System.out.println("2. Remove Book");
@@ -11,6 +12,7 @@ public class Display {
     }
 
     public static void showUserMenu() {
+        System.out.println("Welcome to the Library");
         System.out.println("User Menu:");
         System.out.println("1. Show All Books");
         System.out.println("2. Borrow Book");
