@@ -1,14 +1,21 @@
 import java.util.ArrayList;
 
 public class Display {
-    public static void showMenu() {
-        System.out.println("Library Management System:");
+    public static void showAdminMenu() {
+        System.out.println("Admin Menu:");
         System.out.println("1. Add Book");
         System.out.println("2. Remove Book");
         System.out.println("3. Show All Books");
-        System.out.println("4. Borrow Book");
-        System.out.println("5. Return Book");
-        System.out.println("6. Exit");
+        System.out.println("4. Exit");
+        System.out.print("Enter your choice: ");
+    }
+
+    public static void showUserMenu() {
+        System.out.println("User Menu:");
+        System.out.println("1. Show All Books");
+        System.out.println("2. Borrow Book");
+        System.out.println("3. Return Book");
+        System.out.println("4. Exit");
         System.out.print("Enter your choice: ");
     }
 
@@ -29,13 +36,5 @@ public class Display {
                 System.out.println("---------------------------");
             }
         }
-    }
-
-    public static void showCategoryMenu() {
-        System.out.println("Available categories:");
-        for (Categories category : Categories.values()) {
-            System.out.println("- " + category.name());
-        }
-        System.out.print("Enter the category name: ");
     }
 }
