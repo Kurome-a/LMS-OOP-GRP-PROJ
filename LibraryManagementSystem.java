@@ -87,7 +87,7 @@ class LibraryManagementSystem {
                     System.out.println("7. Journals");
                     System.out.print("Enter Category: ");
                     int categoryChoice = scanner.nextInt();
-                    scanner.nextLine(); // Consume newline
+                    scanner.nextLine();
     
                     String itemType = "book"; // Default category label
                     Book newBook = null;
