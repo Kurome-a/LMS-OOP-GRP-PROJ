@@ -1,16 +1,14 @@
-public class Book {
+public abstract class Book {
     private String title;
     private String author;
     private String ISBN;
     private boolean available;
-    private Categories category;
 
-    public Book(String title, String author, String ISBN, boolean available, Categories category) {
+    public Book(String title, String author, String ISBN, boolean available) {
         this.title = title;
         this.author = author;
         this.ISBN = ISBN;
         this.available = available;
-        this.category = category;
     }
 
     public String getTitle() {
@@ -33,11 +31,6 @@ public class Book {
         this.available = available;
     }
 
-    public Categories getCategory() {
-        return category;
-    }
-
-    public void setCategory(Categories category) {
-        this.category = category;
-    }
+    // Abstract for subclasses
+    public abstract String getCategoryDetails();
 }
