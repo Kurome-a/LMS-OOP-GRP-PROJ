@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 
+import Categories.Book;
+
 public class Display {
-    public static void showAdminMenu() {
+    public static void showAdminMenu() { // Admin
         System.out.println("Welcome to the Library Management System");
         System.out.println("Admin Menu:");
         System.out.println("1. Add Book");
@@ -11,7 +13,7 @@ public class Display {
         System.out.print("Enter your choice: ");
     }
 
-    public static void showUserMenu() {
+    public static void showUserMenu() { // User Interface
         System.out.println("Welcome to the Library");
         System.out.println("User Menu:");
         System.out.println("1. Show All Books");
@@ -21,11 +23,11 @@ public class Display {
         System.out.print("Enter your choice: ");
     }
 
-    public static void showSuccessMessage(String message) {
+    public static void showSuccessMessage(String message) { // Success Promt
         System.out.println(message);
     }
 
-    public static void showAllBooks(ArrayList<Book> books) {
+    public static void showAllBooks(ArrayList<Book> books) { // Show all Books
         if (books.isEmpty()) {
             System.out.println("No books in the library.");
         } else {
