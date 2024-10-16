@@ -1,3 +1,5 @@
+import Categories.Book;
+
 public class Return {
     public static void returnBook(Library library, String ISBN) {
         if (library.getBooks().isEmpty()) {
