@@ -1,3 +1,4 @@
+import Categories.*;
 import java.util.Scanner;
 
 class LibraryManagementSystem {
@@ -95,47 +96,47 @@ class LibraryManagementSystem {
                     
                     // Determine the type of item being added
                     switch (categoryChoice) {
-                        case 1:
+                        case 1: // General Books (No changes added)
                             newBook = new Books(title, author, ISBN, available);
                             itemType = "book"; // General Books
                             break;
-                        case 2:
+                        case 2: // Publication Frequency (Num or Char)
                             System.out.print("Enter publication frequency: ");
                             String publicationFrequency = scanner.nextLine();
                             newBook = new Periodicals(title, author, ISBN, available, publicationFrequency);
                             itemType = "periodical";
                             break;
-                        case 3:
+                        case 3: // Multimedia (Char)
                             System.out.print("Enter format type: ");
                             String formatType = scanner.nextLine();
                             newBook = new Multimedia(title, author, ISBN, available, formatType);
                             itemType = "multimedia item";
                             break;
-                        case 4:
+                        case 4: // Databases (Char)
                             System.out.print("Enter access method: ");
                             String accessMethod = scanner.nextLine();
                             newBook = new Databases(title, author, ISBN, available, accessMethod);
                             itemType = "database";
                             break;
-                        case 5:
+                        case 5: // Referencework (Char)
                             System.out.print("Enter subject: ");
                             String subject = scanner.nextLine();
                             newBook = new ReferenceWorks(title, author, ISBN, available, subject);
                             itemType = "reference work";
                             break;
-                        case 6:
+                        case 6: // Maps (Char)
                             System.out.print("Enter region covered: ");
                             String regionCovered = scanner.nextLine();
                             newBook = new Maps(title, author, ISBN, available, regionCovered);
                             itemType = "map";
                             break;
-                        case 7:
+                        case 7: // Journal (Num and Char)
                             System.out.print("Enter journal issue: ");
                             String journalIssue = scanner.nextLine();
                             newBook = new Journals(title, author, ISBN, available, journalIssue);
                             itemType = "journal";
                             break;
-                        default:
+                        default: // Error Promt
                             System.out.println("Invalid category. Item not added.");
                             System.out.println("");
                             continue;
@@ -165,7 +166,7 @@ class LibraryManagementSystem {
                     Display.showSuccessMessage("Exiting admin system.");
                     return;
     
-                default:
+                default: // Error Promt
                     System.out.println("Invalid choice. Please try again.");
                     System.out.println("");
             }
@@ -208,7 +209,7 @@ class LibraryManagementSystem {
                     Display.showSuccessMessage("Exiting user system. Goodbye!");
                     return;
 
-                default:
+                default: // Error Promt
                     System.out.println("Invalid choice. Please try again.");
                     System.out.println("");
             }
