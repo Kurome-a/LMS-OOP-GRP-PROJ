@@ -1,3 +1,5 @@
+import Categories.Book;
+
 public class Borrow {
     public static void borrowBook(Library library, String ISBN) {
         if (library.getBooks().isEmpty()) {
