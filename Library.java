@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+import Categories.Book;
+
 class Library {
     private ArrayList<Book> books;
 
